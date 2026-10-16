@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المهندس محمود - مركز صيانة الهواتف المحمولة</title>
+    
+    <!-- كود الـ Passcode لحماية الموقع -->
+    <script>
+        // يمكنك تغيير كلمة السر من هنا (مثلاً جعلها 2026 أو أي رمز تحبه)
+        const CORRECT_PASSCODE = "1234"; 
+
+        let userPass = prompt("برجاء إدخال الـ Passcode للدخول لمركز صيانة المهندس محمود:");
+
+        if (userPass !== CORRECT_PASSCODE) {
+            alert("رمز المرور غير صحيح! تم رفض الدخول.");
+            // إخفاء المحتوى وإيقاف تحميل الصفحة
+            document.write("<div style='background-color:#0b0b0b; color:#ff4d4d; height:100vh; display:flex; justify-content:center; align-items:center; font-family:sans-serif; direction:rtl;'><h1>عفواً، الدخول غير مصرح به! رمز المرور خاطئ.</h1></div>");
+            window.stop();
+        }
+    </script>
+
+    <style>
+        /* إعادة ضبط العناصر */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* الخلفية السوداء والنص الذهبي */
+        body {
+            background-color: #0b0b0b;
+            color: #d4af37;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* الهيدر والقائمة */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(15, 15, 15, 0.95);
+            border-bottom: 1px solid #d4af37;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f3e5ab;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        nav a {
+            color: #d4af37;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* القسم الرئيسي (Hero) */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 8%;
+            min-height: 85vh;
+            background: radial-gradient(circle at center, #181818 0%, #0b0b0b 100%);
+        }
+
+        .intro {
+            max-width: 50%;
+        }
+
+        .intro h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #f3e5ab;
+        }
+
+        .intro h1 span {
+            color: #ffd700;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #cccccc;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #d4af37, #aa7c11);
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.7);
+        }
+
+        /* تأثير الصورة الـ 3D */
+        .image-container {
+            perspective: 1000px;
+        }
+
+        .hero-img {
+            width: 380px;
+            border-radius: 15px;
+            border: 2px solid #d4af37;
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .hero-img:hover {
+            transform: rotateY(-10deg) rotateX(5deg) scale(1.03);
+            box-shadow: 0 20px 45px rgba(255, 215, 0, 0.5);
+        }
+
+        /* الكروت والخدمات 3D */
+        .services {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #ffd700;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #141414;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            width: 280px;
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10deg) rotateX(4deg);
+            border-color: #ffd700;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .card h3 {
+            color: #f3e5ab;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aaaaaa;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .intro {
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+            .hero-img {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ENG. MAHMOUD</div>
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#about">عني</a>
+            <a href="#services">الخدمات</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="intro">
+                <h1>أهلاً، أنا <span>المهندس محمود</span></h1>
+                <p>مهندس متخصص في صيانة وإصلاح كافة أنواع الهواتف الذكية (Hardware & Software)، واستعادة البيانات وحل أعطال البوردة الدقيقة بأعلى جودة واحترافية.</p>
+                <a href="#services" class="button">استكشف الخدمات</a>
+            </div>
+
+            <div class="image-container">
+                <img src="watermarked_img_11371236312335613064.jpg" alt="صيانة هواتف 3D" class="hero-img">
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <h2>خدمات الصيانة الاحترافية</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>صيانة الهاردوير</h3>
+                    <p>تغيير الشاشات، البطاريات، المداخل، وتتبع مسارات البوردة بدقة عالية.</p>
+                </div>
+                <div class="card">
+                    <h3>السوفتوير والأنظمة</h3>
+                    <p>تفليش جميع أجهزة الآيفون والأندرويد، حل مشاكل وضع الاسترداد، وتجاوز الأعطال البرمجية.</p>
+                </div>
+                <div class="card">
+                    <h3>إصلاح أعطال البوردة</h3>
+                    <p>صيانة دقيقة للمكونات الإلكترونية الدقيقة وآي سيات (IC) الشحن والباور والشبكة.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
