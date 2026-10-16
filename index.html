@@ -1,216 +1,219 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MAHMOUD | Personal Website</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #080d18;
-      color: white;
-      line-height: 1.8;
-    }
-
-    header {
-      padding: 22px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #101827;
-      border-bottom: 1px solid #24344e;
-    }
-
-    .logo {
-      color: #35b8ff;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 18px;
-    }
-
-    nav a:hover {
-      color: #35b8ff;
-    }
-
-    .hero {
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 55px;
-      padding: 60px 8%;
-      flex-wrap: wrap;
-    }
-
-    .photo {
-      width: 270px;
-      height: 350px;
-      object-fit: cover;
-      border-radius: 25px;
-      border: 3px solid #35b8ff;
-      box-shadow: 0 0 35px #168bca44;
-    }
-
-    .intro {
-      max-width: 520px;
-    }
-
-    .intro h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
-
-    .intro h1 span {
-      color: #35b8ff;
-    }
-
-    .intro p {
-      color: #bdc8da;
-      margin-bottom: 20px;
-    }
-
-    .button {
-      display: inline-block;
-      background: #168bca;
-      color: white;
-      text-decoration: none;
-      padding: 10px 24px;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-
-    section.content {
-      padding: 55px 8%;
-      text-align: center;
-    }
-
-    section h2 {
-      color: #35b8ff;
-      margin-bottom: 18px;
-      font-size: 30px;
-    }
-
-    .cards {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 25px;
-    }
-
-    .card {
-      background: #101827;
-      border: 1px solid #24344e;
-      padding: 25px;
-      border-radius: 15px;
-      width: 240px;
-    }
-
-    .card h3 {
-      color: #35b8ff;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #8998ad;
-      border-top: 1px solid #24344e;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .intro h1 {
-        font-size: 32px;
-      }
-
-      .hero {
-        gap: 30px;
-        text-align: center;
-      }
-
-      .photo {
-        width: 220px;
-        height: 280px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My personal portfolio website">
+    <title>My Portfolio | Personal Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <div class="logo">MAHMOUD.</div>
-    <nav>
-      <a href="#home">الرئيسية</a>
-      <a href="#about">عني</a>
-      <a href="#skills">مهاراتي</a>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">My<span>Portfolio.</span></a>
 
-  <main>
-    <div class="hero" id="home">
-      <div class="intro">
-        <h1>أهلاً، أنا <span>محمود</span></h1>
-        <p>
-          مهتم بالبرمجة وتصميم المواقع وتطوير مهاراتي
-          في عالم التكنولوجيا. دي مساحتي الشخصية على الإنترنت.
-        </p>
-        <a href="#about" class="button">اعرف عني أكتر</a>
-      </div>
-     <img src="myphoto.jpeg" alt="My Photo" width="300">    
-      
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav><button id="themeToggle" type="button">☀️ Light Mode</button>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+                 <h1>Hi, I'm <span><Main></Main>Mahmoud AbdElmqsoud</span></h1>
+
+<h2>Fourth-Year Student</h2>
+
+<p class="hero-description">
+    I'm a fourth-year student passionate about technology,
+    web development, and creating modern digital experiences.
+</p>
+
+                <a href="#projects" class="btn">Explore My Work</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/my-photo.jpg" alt="My personal photo">
+                     alt="My personal photo">
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About <span>Me</span></h2>
+            <p>I'm a fourth-year student working on my personal portfolio.</p>
+        </section>
+
+        <section id="skills" class="skills-section">
+    <p class="welcome">WHAT I CAN DO</p>
+    <h2>My <span>Skills</span></h2>
+
+    <p class="skills-description">
+        Skills and knowledge I'm developing through learning and practice.
+    </p>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>HTML</h3>
+            <p>Web Structure</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>CSS</h3>
+            <p>Web Styling</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <p>Web Interactivity</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>C++</h3>
+            <p>Programming</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Python</h3>
+            <p>Programming</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Microsoft Office</h3>
+            <p>Office Applications</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Image Design</h3>
+            <p>Creative Design</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Mobile Repair</h3>
+            <p>Mobile Maintenance</p>
+        </div>
+
     </div>
+</section>
 
-    <section class="content" id="about">
-      <h2>من أنا؟</h2>
-      <p>
-        أنا محمود، بتعلم تصميم المواقع باستخدام HTML وCSS،
-        وبسعى إني أطور نفسي وأعمل مشاريع مميزة.
-      </p>
-    </section>
+       <section id="projects" class="projects-section">
+    <p class="welcome">MY RECENT WORK</p>
 
-    <section class="content" id="skills">
-      <h2>مهاراتي واهتماماتي</h2>
+    <h2>My <span>Projects</span></h2>
 
-      <div class="cards">
-        <div class="card">
-          <h3>HTML</h3>
-          <p>إنشاء صفحات المواقع وتنظيم محتواها.</p>
-        </div>
+    <p class="projects-description">
+        Here are some projects that showcase my skills and creativity.
+    </p>
 
-        <div class="card">
-          <h3>CSS</h3>
-          <p>تصميم الصفحات والألوان والتنسيقات.</p>
-        </div>
+    <div class="projects-container">
 
-        <div class="card">
-          <h3>التطوير</h3>
-          <p>تعلم تقنيات جديدة وتنفيذ أفكار مختلفة.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+        <article class="project-card">
+            <div class="project-number">01</div>
 
-  <footer>
-    © 2026 MAHMOUD | جميع الحقوق محفوظة
-  </footer>
+            <div class="project-content">
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A personal website introducing me, my skills,
+                    and my work using modern web technologies.
+                </p>
+
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-number">02</div>
+
+            <div class="project-content">
+                <h3>Image Design</h3>
+
+                <p>
+                    Creative visual designs focused on layout,
+                    colors, and presenting ideas clearly.
+                </p>
+
+                <div class="project-tags">
+                    <span>Design</span>
+                    <span>Creativity</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-number">03</div>
+
+            <div class="project-content">
+                <h3>Mobile Maintenance</h3>
+
+                <p>
+                    A showcase of my interest in mobile devices,
+                    troubleshooting, and maintenance.
+                </p>
+
+                <div class="project-tags">
+                    <span>Mobile</span>
+                    <span>Maintenance</span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+      <section id="contact" class="contact-section">
+    <p class="welcome">LET'S CONNECT</p>
+
+    <h2>Contact <span>Me</span></h2>
+
+    <p class="contact-description">
+        Have a question or an opportunity?
+        Feel free to get in touch with me.
+    </p>
+
+   <div class="contact-card">
+    <span class="contact-icon">✉</span>
+    <h3>Email</h3>
+    <p>
+        <a href="mailto:Mo.basem22@gmail.com">
+            Mo.basem22@gmail.com
+        </a>
+    </p>
+</div>
+
+<div class="contact-card">
+    <span class="contact-icon">☏</span>
+    <h3>WhatsApp</h3>
+    <p>
+        <a href="https://wa.me/201002824178" target="_blank" rel="noopener noreferrer">
+            +201002824178
+        </a>
+    </p>
+</div>
+</section>
+    </main>
+
+    <footer>
+        <p>© 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+ <button id="backToTop" aria-label="Back to top" title="Back to top">
+    ↑
+</button>
+
+<script src="script.js"></script>
 
 </body>
 </html>
